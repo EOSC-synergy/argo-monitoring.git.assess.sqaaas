@@ -1,0 +1,52 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/ARGOeu/argo-monitoring:
+      branch: master
+      repo: https://github.com/ARGOeu/argo-monitoring.git
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.9
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/ARGOeu/argo-monitoring git:
+        commands:
+        - /usr/bin/env sh .sqa/script.randy-cream-budgerigar.sh
+        container: qc.acc_leaky-champagne-burmese
+  QC.Doc:
+    repos:
+      github.com/ARGOeu/argo-monitoring find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.tasty-cyan-caiman.sh
+        container: qc.doc_queasy-vermilion-frise
+      github.com/ARGOeu/argo-monitoring git:
+        commands:
+        - /usr/bin/env sh .sqa/script.greasy-mustard-shark.sh
+        container: qc.doc_hazy-beige-dugong
+      github.com/ARGOeu/argo-monitoring markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.wimpy-silver-lemming.sh
+        container: qc.doc_seedy-scarlet-dachshund
+  QC.Lic:
+    repos:
+      github.com/ARGOeu/argo-monitoring licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.snoopy-magnolia-owl.sh
+        container: qc.lic_slaphappy-russet-coral
+  QC.Sty:
+    repos:
+      github.com/ARGOeu/argo-monitoring jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.stuffy-ochre-uakari.sh
+        container: qc.sty_leaky-auburn-leopard
+  QC.Ver:
+    repos:
+      github.com/ARGOeu/argo-monitoring get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.cheeky-platinum-pinscher.sh
+        container: qc.ver_sloppy-ecru-loon
+timeout: 5400
