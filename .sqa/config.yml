@@ -5,7 +5,7 @@ config:
       branch: master
       repo: https://github.com/ARGOeu/argo-monitoring.git
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/2.2.1
+      branch: main
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
 environment:
   JPL_DOCKERFORCEBUILD: enabled
@@ -15,38 +15,38 @@ sqa_criteria:
     repos:
       github.com/ARGOeu/argo-monitoring git:
         commands:
-        - /usr/bin/env sh .sqa/script.nippy-pumpkin-chihuahua.sh
-        container: qc.acc_nippy-yellow-frog
+        - /usr/bin/env sh .sqa/script.snappy-lavender-tetra.sh
+        container: qc.acc_thirsty-gamboge-tortoise
   QC.Doc:
     repos:
       github.com/ARGOeu/argo-monitoring find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sunny-bronze-gorilla.sh
-        container: qc.doc_breezy-denim-beetle
+        - /usr/bin/env sh .sqa/script.fuzzy-cinnamon-cassowary.sh
+        container: qc.doc_paltry-seashell-russel
       github.com/ARGOeu/argo-monitoring git:
         commands:
-        - /usr/bin/env sh .sqa/script.hasty-peach-slug.sh
-        container: qc.doc_seedy-gamboge-russel
+        - /usr/bin/env sh .sqa/script.dorky-magenta-penguin.sh
+        container: qc.doc_homey-asparagus-kakapo
       github.com/ARGOeu/argo-monitoring markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.flaky-persimmon-ferret.sh
-        container: qc.doc_flabby-xanthic-lemming
+        - /usr/bin/env sh .sqa/script.skinny-eggplant-oriole.sh
+        container: qc.doc_crappy-white-harrier
   QC.Lic:
     repos:
       github.com/ARGOeu/argo-monitoring licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.tasty-green-turkey.sh
-        container: qc.lic_smelly-coral-civet
+        - /usr/bin/env sh .sqa/script.leaky-harlequin-meerkat.sh
+        container: qc.lic_flabby-razzmatazz-wolf
   QC.Sty:
     repos:
       github.com/ARGOeu/argo-monitoring jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.fuzzy-khaki-scorpion.sh
-        container: qc.sty_breezy-red-albatross
+        - /usr/bin/env sh .sqa/script.wiggy-myrtle-kudu.sh
+        container: qc.sty_homely-jade-barnacle
   QC.Ver:
     repos:
       github.com/ARGOeu/argo-monitoring get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.shaky-auburn-kudu.sh
-        container: qc.ver_clammy-wisteria-greyhound
+        - /usr/bin/env sh .sqa/script.squeaky-lime-whale.sh
+        container: qc.ver_shabby-khaki-anteater
 timeout: 5400
