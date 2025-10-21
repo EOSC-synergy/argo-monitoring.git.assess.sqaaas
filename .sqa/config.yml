@@ -15,38 +15,38 @@ sqa_criteria:
     repos:
       github.com/ARGOeu/argo-monitoring git:
         commands:
-        - /usr/bin/env sh .sqa/script.snappy-lavender-tetra.sh
-        container: qc.acc_thirsty-gamboge-tortoise
+        - /usr/bin/env sh .sqa/script.bumpy-magenta-fossa.sh
+        container: qc.acc_gummy-periwinkle-havanese
   QC.Doc:
     repos:
       github.com/ARGOeu/argo-monitoring find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.fuzzy-cinnamon-cassowary.sh
-        container: qc.doc_paltry-seashell-russel
+        - /usr/bin/env sh .sqa/script.geeky-violet-malamute.sh
+        container: qc.doc_lumpy-emerald-mule
       github.com/ARGOeu/argo-monitoring git:
         commands:
-        - /usr/bin/env sh .sqa/script.dorky-magenta-penguin.sh
-        container: qc.doc_homey-asparagus-kakapo
+        - /usr/bin/env sh .sqa/script.shaggy-cardinal-hedgehog.sh
+        container: qc.doc_jumpy-scarlet-greyhound
       github.com/ARGOeu/argo-monitoring markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.skinny-eggplant-oriole.sh
-        container: qc.doc_crappy-white-harrier
+        - /usr/bin/env sh .sqa/script.sleepy-thistle-schnauzer.sh
+        container: qc.doc_boozy-taupe-zebra
   QC.Lic:
     repos:
       github.com/ARGOeu/argo-monitoring licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.leaky-harlequin-meerkat.sh
-        container: qc.lic_flabby-razzmatazz-wolf
+        - /usr/bin/env sh .sqa/script.bluesy-seashell-greyhound.sh
+        container: qc.lic_scaly-amber-dachsbracke
   QC.Sty:
     repos:
       github.com/ARGOeu/argo-monitoring jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.wiggy-myrtle-kudu.sh
-        container: qc.sty_homely-jade-barnacle
+        - /usr/bin/env sh .sqa/script.skanky-peach-walrus.sh
+        container: qc.sty_shabby-champagne-kudu
   QC.Ver:
     repos:
       github.com/ARGOeu/argo-monitoring get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.squeaky-lime-whale.sh
-        container: qc.ver_shabby-khaki-anteater
+        - /usr/bin/env sh .sqa/script.seedy-amber-eagle.sh
+        container: qc.ver_skanky-khaki-axolotl
 timeout: 5400
